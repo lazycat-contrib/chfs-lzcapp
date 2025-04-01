@@ -1,0 +1,20 @@
+lzc-sdk-version: "0.1"
+name: CuteHttpFileServer
+package: cloud.lazycat.app.chfs
+version: 4.0.0
+description: 一个免费的、HTTP协议的文件共享服务器，使用浏览器可以快速访问.
+homepage: http://iscute.cn/chfs
+author: iscute
+application:
+  subdomain: chfs
+  background_task: true
+  multi_instance: false
+  gpu_accel: false
+  kvm_accel: false
+  usb_accel: false
+  public_path:
+    - /
+  routes:
+    - /=exec://8081,/lzcapp/pkg/content/setup.sh
+
+
